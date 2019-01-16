@@ -7,7 +7,11 @@ class App extends Component {
   render() {
     return (
     <React.Fragment>
-      <Useroutput />
+      <Useroutput name="GEORGE"/>
+      <Useroutput name="NEIN" />
+      <Useroutput name="ABSOLUTELYNOT"/>
+      <Useroutput name="HURRRDURR"/>
+
       <Userinput />
     </React.Fragment>
       
