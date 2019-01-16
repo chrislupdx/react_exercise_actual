@@ -1,9 +1,9 @@
 import React from 'react';
 
-const userinput = () => {
+const userinput = (props) => {
     return (
     <div>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="change" onClick={props.click} />
         <input type="text" />
     </div>
 

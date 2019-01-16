@@ -15,17 +15,35 @@ class App extends Component {
 
   }
 
+  somethingHandler = () => {
+    // this.state.name[0].name = 'NOTHING LEFT BUT RUIN';
+    this.setState({
+      name:[
+        { name: 'RUIN'},
+        { name: 'GLUTTON'},
+        { name: 'POOP'},
+        { name: 'GEORGIE'}
+      ] 
+    })
+  }
+
   render() {
     return (
-    <React.Fragment>
-      <Useroutput name={this.state.name[0].name}/>
-      <Useroutput name={this.state.name[1].name} />
-      <Useroutput name={this.state.name[2].name}/>
-      <Useroutput name={this.state.name[2].name}/>
-
-      <Userinput />
-    </React.Fragment>
+    <div className="App">
+    
+      <button onClick={this.somethingHandler}>lies</button>
+      <Useroutput 
+        name={this.state.name[0].name}/>
+      <Useroutput 
+        name={this.state.name[1].name} />
+      <Useroutput 
+        name={this.state.name[2].name}/>
+      <Useroutput 
+        name={this.state.name[3].name}/>
       
+      <Userinput
+        click ={this.somethingHandler} />
+    </div>  
      
     );
   }
