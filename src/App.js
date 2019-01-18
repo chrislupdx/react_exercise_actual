@@ -6,43 +6,30 @@ import './App.css';
 class App extends Component {
 
   state = {
-    name: [
-      {name: 'GEROGE' },
-      {name: 'nein'},
-      {name : "ABSOLUTENOT"},
-      {name: "HURRDURR"},
-    ]
-
+    name: 'GEROGE',
   }
 
-  somethingHandler = () => {
-    // this.state.name[0].name = 'NOTHING LEFT BUT RUIN';
-    this.setState({
-      name:[
-        { name: 'RUIN'},
-        { name: 'GLUTTON'},
-        { name: 'POOP'},
-        { name: 'GEORGIE'}
-      ] 
-    })
+  somethingHandler = (event) => {
+    this.setState({ name: event.target.value, });
   }
 
   render() {
     return (
     <div className="App">
     
-      <button onClick={this.somethingHandler}>lies</button>
       <Useroutput 
-        name={this.state.name[0].name}/>
+        name={this.state.name}/>
       <Useroutput 
-        name={this.state.name[1].name} />
+        name={this.state.name} />
       <Useroutput 
-        name={this.state.name[2].name}/>
+        name={this.state.name}/>
       <Useroutput 
-        name={this.state.name[3].name}/>
+        name={this.state.name}/>
       
       <Userinput
-        click ={this.somethingHandler} />
+        changed = {this.somethingHandler}
+        currentName = {this.state.name}
+        />
     </div>  
      
     );
